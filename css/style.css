@@ -406,7 +406,7 @@ span{
     width: 2px;
     background-color: var(--main-color);
     z-index: 0;
-    height: 100%; /* Extend line through the entire timeline */
+    height: 100%; 
 }
 
 /* Extend the line downwards from each point except the last */
@@ -416,7 +416,7 @@ span{
 
 .timeline-content {
     padding: 20px;
-    background: rgba(102, 0, 255, 0.1);
+    background: rgba(0, 166, 255, 0.1);
     border: 1px solid var(--main-color);
     border-radius: 15px;
     max-width: 400px;
