@@ -115,3 +115,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+ // JavaScript for handling the popup functionality
+ document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('popup');
+  const popupImage = document.getElementById('popup-image');
+  const popupDescription = document.getElementById('popup-description');
+  const closePopup = document.querySelector('.close-popup');
+
+  // Open popup on clicking a project link
+  document.querySelectorAll('.open-popup').forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const image = link.getAttribute('data-image');
+          const description = link.getAttribute('data-description');
+
+          popupImage.src = image;
+          popupDescription.textContent = description;
+
+          popup.style.display = 'flex';
+      });
+  });
+
+  // Close popup when clicking the close button
+  closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+  });
+
+  // Close popup when clicking outside the content
+  popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+          popup.style.display = 'none';
+      }
+  });
+});z
