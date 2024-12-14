@@ -1088,7 +1088,25 @@ span{
     
 
 }
+@media (max-width: 1175px){
+    
+    .navbar a:nth-child(1){
+        color:white;
+    }
+    .navbar a.active::before{
+        background: white;
+    }
+}
 @media (max-width: 1154px){
+    
+    .navbar a:nth-child(1){
+        color:white;
+    }
+    .navbar a.active::before{
+        background: white;
+        opacity: .7;
+    }
+
     .home .profession-container .profession-box{
         right: -8rem;
         /* height: 80rem; */
@@ -1140,11 +1158,11 @@ span{
 
 @media(max-width: 1055px){
     .navbar a:nth-child(1){
-        color: var(--main-color);
+        color: white;
     }
 
     .navbar a.active::before{
-        background: var(--main-color);
+        background: white;
         opacity: .7;
     }
     .home .home-content{
