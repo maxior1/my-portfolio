@@ -321,7 +321,10 @@ span{
     align-items: center;
 }
 .about-img img{
-    width: 40vw;
+    width: 25vw;
+    margin-right: 40px;
+    margin-top: -100px;
+    
 }
 .heading{
     font-size: 2.3rem;
@@ -1328,7 +1331,7 @@ span{
         text-align: center;
     }
     .about-img img{
-        width: 50vw;
+        width: 40vw;
         /* margin-top: -2rem; */
     }
     .skills h2,
