@@ -766,6 +766,13 @@ span{
     cursor: pointer;
     color: red;
 }
+.close-popup:hover,
+.close-popup:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /* Centered Image */
 .popup-content img {
@@ -956,7 +963,7 @@ span{
     position: absolute;
     top: 20px;
     right: 35px;
-    color: #fff;
+    color: red;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -1053,6 +1060,13 @@ span{
     html{
         font-size: 95%;
     }
+    .navbar a:nth-child(1){
+        color: var(--main-color);
+    }
+    .navbar a.active::before{
+        background: var(--main-color);
+        opacity: .7;
+    }
 }
 
 @media (max-width: 1270px){
@@ -1078,13 +1092,13 @@ span{
     .home .profession-container .circle{
         right: -4rem;
     }
-    .navbar a:nth-child(1){
+    /* .navbar a:nth-child(1){
         color: var(--main-color);
     }
     .navbar a.active::before{
         background: var(--main-color);
         opacity: .7;
-    }
+    } */
     
 
 }
