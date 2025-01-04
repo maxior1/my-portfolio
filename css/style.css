@@ -1020,6 +1020,54 @@ span{
     
 }
 
+
+/* Popup Modal Styling */
+.pop-message {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    z-index: 9999;
+    padding: 20px;
+    text-align: center;
+}
+
+.pop-mg {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pop-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.pop-message-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.pop-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pop-btn:hover {
+    background-color: #45a049;
+}
+
+
 /* ================== Footer ================= */
 .footer{
     display: flex;

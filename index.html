@@ -557,21 +557,30 @@
     <!-- contact section design -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="#">
+    
+        <form id="contact-form" action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="from_name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="10" rows="10" placeholder="Your Message"></textarea>
-            <input type="summit" value="Send Message" class="btn">
+            <textarea name="message" cols="10" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
         </form>
-        
+    
+        <!-- Success/Error Popup Modal -->
+        <div id="pop-message" class="pop-message">
+            <div class="pop-mg">
+                <img id="pop-icon" src="" alt="icon" class="pop-icon">
+                <h3 id="pop-message-text">Message sent successfully!</h3>
+                <button id="pop-btn" class="pop-btn">OK</button>
+            </div>
+        </div>
     </section>
+    
 
     <!-- footer design -->
     <footer class="footer">
@@ -590,6 +599,9 @@
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- email js -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- custom js -->
     <script src="js/script.js"></script>
