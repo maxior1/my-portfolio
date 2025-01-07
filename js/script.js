@@ -159,6 +159,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   emailjs.sendForm('service_jppi50r', 'template_vqt4fsl', this)
       .then(function () {
           alert("Message sent successfully!");
+          document.getElementById('contact-form').reset(); 
       }, function (error) {
           alert("Failed to send message: " + error.text);
       });
@@ -191,14 +192,13 @@ function showPopup(isSuccess, message) {
 
 // Adding event listener to form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
+  event.preventDefault(); 
 
-  // Using emailjs to send form data
   emailjs.sendForm('service_jppi50r', 'template_vqt4fsl', this)
       .then(function(response) {
-          showPopup(true); // Show success popup
-          document.getElementById('contact-form').reset(); // Reset the form fields after success
+          showPopup(true); 
+          document.getElementById('contact-form').reset(); 
       }, function(error) {
-          showPopup(false); // Show error popup
+          showPopup(false); 
       });
 });
