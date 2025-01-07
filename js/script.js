@@ -166,39 +166,39 @@ document.querySelector("form").addEventListener("submit", function (event) {
 });
 
 // Function to show the popup with the correct message and icon
-function showPopup(isSuccess, message) {
-  const popup = document.getElementById('pop-message');
-  const popupMessage = document.getElementById('pop-message-text');
-  const popupIcon = document.getElementById('pop-icon');
-  const popupBtn = document.getElementById('pop-btn');
+// function showPopup(isSuccess, message) {
+//   const popup = document.getElementById('pop-message');
+//   const popupMessage = document.getElementById('pop-message-text');
+//   const popupIcon = document.getElementById('pop-icon');
+//   const popupBtn = document.getElementById('pop-btn');
 
-  // Set the appropriate message and icon based on success or failure
-  if (isSuccess) {
-      popupMessage.textContent = "Message sent successfully!";
-      popupIcon.src = 'https://img.icons8.com/ios/50/000000/checkmark.png'; // Success icon (tick)
-  } else {
-      popupMessage.textContent = "Failed to send message!";
-      popupIcon.src = 'https://img.icons8.com/ios/50/000000/error.png'; // Error icon (cross)
-  }
+//   // Set the appropriate message and icon based on success or failure
+//   if (isSuccess) {
+//       popupMessage.textContent = "Message sent successfully!";
+//       popupIcon.src = 'https://img.icons8.com/ios/50/000000/checkmark.png'; // Success icon (tick)
+//   } else {
+//       popupMessage.textContent = "Failed to send message!";
+//       popupIcon.src = 'https://img.icons8.com/ios/50/000000/error.png'; // Error icon (cross)
+//   }
 
-  // Show the popup
-  popup.style.display = 'block';
+//   // Show the popup
+//   popup.style.display = 'block';
 
-  // Hide the popup when the "OK" button is clicked
-  popupBtn.addEventListener('click', function() {
-      popup.style.display = 'none';
-  });
-}
+//   // Hide the popup when the "OK" button is clicked
+//   popupBtn.addEventListener('click', function() {
+//       popup.style.display = 'none';
+//   });
+// }
 
-// Adding event listener to form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); 
+// // Adding event listener to form submission
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//   event.preventDefault(); 
 
-  emailjs.sendForm('service_jppi50r', 'template_vqt4fsl', this)
-      .then(function(response) {
-          showPopup(true); 
-          document.getElementById('contact-form').reset(); 
-      }, function(error) {
-          showPopup(false); 
-      });
-});
+//   emailjs.sendForm('service_jppi50r', 'template_vqt4fsl', this)
+//       .then(function(response) {
+//           showPopup(true); 
+//           document.getElementById('contact-form').reset(); 
+//       }, function(error) {
+//           showPopup(false); 
+//       });
+// });

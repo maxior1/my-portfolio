@@ -1021,7 +1021,7 @@ span{
 }
 
 
-/* Popup Modal Styling */
+/* ================== PopUp notification Email================= */
 .pop-message {
     display: none; /* Hidden by default */
     position: fixed;
