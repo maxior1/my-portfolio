@@ -171,37 +171,37 @@ document.addEventListener('DOMContentLoaded', () => {
                     "image": "img/portfolio/project/electronic.png",
                     "title": "Electronic Sale Report",
                     "description": "The last project of Business Analystic subject by develop the dashboard and pitching this idea for professor",
-                    "link": "https://lookerstudio.google.com/s/hMtqss51YgY"
+                    "link": "https://lookerstudio.google.com/s/iToZUT2VzMI"
                 },
                 {
                     "image": "img/portfolio/project/living.png",
                     "title": "Bangkok Population",
                     "description": "Developed an population dashboard in a workshop in short course",
-                    "link": "https://lookerstudio.google.com/s/mD_WEaPi94A"
+                    "link": "https://lookerstudio.google.com/s/m8rG2uu2SBs"
                 },
                 {
                     "image": "img/portfolio/project/accident.png",
                     "title": "Accident Statistic in Thailand",
                     "description": "Examimation workshop for finish the course by create a accident dashboard",
-                    "link": "https://lookerstudio.google.com/s/u2BxTXCKlqk"
+                    "link": "https://lookerstudio.google.com/s/viP-IXPW15k"
                 },
                 {
                     "image": "img/portfolio/project/shoping.png",
                     "title": "Shoping Trend Project",
                     "description": "Customer behavior with shoping trend",
-                    "link": "https://lookerstudio.google.com/s/gvOLLaVZIb0"
+                    "link": "https://lookerstudio.google.com/s/ojn7zspLe98"
                 },
                 {
                     "image": "img/portfolio/project/profitt.png",
                     "title": "Practice Project",
                     "description": "Developed an profit dashboard for analyze the profit of a company",
-                    "link": "https://lookerstudio.google.com/s/tG0fIngiTxk"
+                    "link": "https://lookerstudio.google.com/s/h-fRI_qZHlw"
                 },
                 {
                     "image": "img/portfolio/project/salee.png",
                     "title": "Sale Report Dashboard",
-                    "description": "Created an interactive dashboard for business sale reports",
-                    "link": "https://lookerstudio.google.com/s/sNV5mMS-y7Q"
+                    "description": "Created an interactive dashboard for business sale reports", 
+                    "link": "https://lookerstudio.google.com/s/hyMnKICBRxM"
                 }
             ],
             "powerbi-project": [ 
