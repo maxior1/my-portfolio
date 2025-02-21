@@ -20,9 +20,11 @@
     --main-color:#3776b6;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, 0.2);
+    --nav-text--color:#f5b041;
 
 }
 .dark-mode{
+    --nav-text--color:#754ef9;;
     --bg-color: #0b061f;
     --text--color: #fdfdfd;
     --sub--text--color: gray;
@@ -45,13 +47,16 @@ body{
     position:fixed;
     top: 0;
     left: 0;
-    width: 95%;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 50%;
     margin: 5px 30px 5px 40px;
     border-radius: 1rem;
     padding: 1rem 7%;
     background-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 100;
     transition: .5s;
 }
@@ -75,10 +80,13 @@ body{
     color: var(--white-color);
     font-weight: 500;
     margin-right: 2.2rem;
+    text-shadow: 3px 2px 3px var(--main-color);
+    transition: 0.3s ease-in-out;
 }
 
 .header.sticky .navbar a{
     color: var(--text--color);
+    text-shadow: 4px 1px 3px var(--white-color);
 
 }
 
@@ -721,8 +729,10 @@ span{
     font-size: 1.5rem;
 }
 
-/* ============== Popup Portfolio*/
-.popup-container {
+/* ============== Popup Portfolio =================*/
+
+/* --------- Single box ------------ */
+.single-popup-container {
     display: none;
     position: fixed;
     top: 0;
@@ -736,7 +746,7 @@ span{
 }
 
 /* Popup Content */
-.popup-content {
+.popup-content-single {
     background: #fff;
     padding: 20px;
     border: .2rem solid var(--main-color);
@@ -757,16 +767,83 @@ span{
 }
 
 /* Close Button */
-.close-popup {
+.close-popup-single {
     position: absolute;
-    top: 50px;
-    right: 200px;
+    top: 20px;
+    right: 740px;
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
     color: red;
 }
-.close-popup:hover,
+.close-popup-single:hover,
+.close-popup-single:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Centered Image */
+.popup-content-single img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Text */
+.popup-content-single p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* --------- Multi box ------------ */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 50px;
+    border: .2rem solid var(--main-color);
+    box-shadow: 0px 5px 15px var(--main-color); 
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 100%;
+    animation: fadeIn .2s;
+    
+}
+@keyframes fadeIn {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 740px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+.close-popup:hover,header
 .close-popup:focus{
     color: #bbb;
     text-decoration: none;
@@ -785,6 +862,70 @@ span{
 .popup-content p {
     font-size: 16px;
     color: #444;
+}
+
+/* Arrange the projects in a horizontal row */
+.popup-projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 boxes per row */
+    gap: 20px; /* Spacing between boxes */
+    padding: 100px;
+    margin-top: 10px;
+    padding: 15px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    width: 100%; /* Make the whole container smaller */
+    max-width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+}
+
+/* Individual project card */
+.popup-project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 2px 8px var(--sub--text--color);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    flex: 0 0 calc(33.33% - 20px);
+    scroll-snap-align: start;
+}
+
+.popup-project-box img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* .popup-project-box h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+} */
+
+.popup-project-box p {
+    font-size: 14px;
+    color: var(--text--color);
+}
+
+.popup-project-box a {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--main-color);
+    transition: all  0.3s ease;
+}
+.popup-project-box a:hover {
+    color: #007bff;
+    transform: scale(1.02);
 }
 
 
@@ -874,11 +1015,11 @@ span{
 
 .image-container:hover .hover-text {
     opacity: 1;
-    visibility: visible; /* Shows the text when hovering */
+    visibility: visible; 
 }
 
 .image-container:hover img {
-    transform: scale(1.1); /* Ensures scaling occurs with text visibility */
+    transform: scale(1.1); 
 }
 
 
@@ -924,7 +1065,7 @@ span{
 .certificate-box .swiper-pagination-bullet-active{
     background: var(--main-color);
 }
-/* =========================== Pop UP=================== */
+/* =========================== Pop UP Certificate =================== */
 .modal {
     display: none;
     position: fixed;

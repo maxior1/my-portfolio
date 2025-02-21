@@ -118,13 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
  // JavaScript for handling the popup functionality
  document.addEventListener('DOMContentLoaded', () => {
-  const popup = document.getElementById('popup');
+  const popup = document.getElementById('popup-single');
   const popupImage = document.getElementById('popup-image');
   const popupDescription = document.getElementById('popup-description');
-  const closePopup = document.querySelector('.close-popup');
+  const closePopup = document.querySelector('.close-popup-single');
 
   // Open popup on clicking a project link
-  document.querySelectorAll('.open-popup').forEach(link => {
+  document.querySelectorAll('.open-popup-single').forEach(link => {
       link.addEventListener('click', (e) => {
           e.preventDefault();
 
@@ -151,7 +151,155 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//============Send Email
+// ==================================== Pop-up with many container ============================
+    document.addEventListener("DOMContentLoaded", function () {
+        const openPopupLinks = document.querySelectorAll(".open-popup");
+        const popup = document.getElementById("popup");
+        const closePopup = document.querySelector(".close-popup");
+        const popupProjectsContainer = document.getElementById("popup-projects-container");
+
+        // Project Data (Mapped by Portfolio ID)
+        const projectsData = {
+            "looker-project": [  // This ID should match a dataset in HTML
+                {
+                    "image": "img/portfolio/project/logis.png",
+                    "title": "Logistic Project",
+                    "description": "Desinged a dashboard to present about logistic for a company",
+                    "link": "https://lookerstudio.google.com/s/j13j47bBGUo"
+                },
+                {
+                    "image": "img/portfolio/project/electronic.png",
+                    "title": "Electronic Sale Report",
+                    "description": "The last project of Business Analystic subject by develop the dashboard and pitching this idea for professor",
+                    "link": "https://lookerstudio.google.com/s/hMtqss51YgY"
+                },
+                {
+                    "image": "img/portfolio/project/living.png",
+                    "title": "Bangkok Population",
+                    "description": "Developed an population dashboard in a workshop in short course",
+                    "link": "https://lookerstudio.google.com/s/mD_WEaPi94A"
+                },
+                {
+                    "image": "img/portfolio/project/accident.png",
+                    "title": "Accident Statistic in Thailand",
+                    "description": "Examimation workshop for finish the course by create a accident dashboard",
+                    "link": "https://lookerstudio.google.com/s/u2BxTXCKlqk"
+                },
+                {
+                    "image": "img/portfolio/project/shoping.png",
+                    "title": "Shoping Trend Project",
+                    "description": "Customer behavior with shoping trend",
+                    "link": "https://lookerstudio.google.com/s/gvOLLaVZIb0"
+                },
+                {
+                    "image": "img/portfolio/project/profitt.png",
+                    "title": "Practice Project",
+                    "description": "Developed an profit dashboard for analyze the profit of a company",
+                    "link": "https://lookerstudio.google.com/s/tG0fIngiTxk"
+                },
+                {
+                    "image": "img/portfolio/project/salee.png",
+                    "title": "Sale Report Dashboard",
+                    "description": "Created an interactive dashboard for business sale reports",
+                    "link": "https://lookerstudio.google.com/s/sNV5mMS-y7Q"
+                }
+            ],
+            "powerbi-project": [ 
+                {
+                    "image": "img/portfolio/bi/hospital.png",
+                    "title": "Hospital Emergency Room",
+                    "description": "Analyzed the dashboard by using Decriptive Analystic method",
+                    "link": "#"
+                },
+                {
+                    "image": "img/portfolio/bi/zomato.png",
+                    "title": "Zomato delivery",
+                    "description": "Practice dashboard for YouTube with function and language coding",
+                    "link": "#"
+                },
+                {
+                    "image": "img/portfolio/bi/sale.png",
+                    "title": "Sale Report workshop",
+                    "description": "Create dashboard to complete the academy course ",
+                    "link": "#"
+                },
+                {
+                    "image": "img/portfolio/bi/condo.png",
+                    "title": "Condo Sale project",
+                    "description": "Analyzed the insight of data by create dashboard",
+                    "link": "#"
+                }
+                
+            ]
+        };
+
+        openPopupLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                // Get project ID from the clicked element
+                const projectId = this.getAttribute("data-project-id"); 
+
+                // Clear previous content
+                popupProjectsContainer.innerHTML = "";
+
+                // Get the correct project set based on ID
+                const projects = projectsData[projectId] || []; // Default to empty array if ID not found
+
+                // Generate project boxes dynamically
+                projects.forEach(project => {
+                    let projectBox = document.createElement("div");
+                    projectBox.classList.add("popup-project-box");
+
+                    let projectImage = document.createElement("img");
+                    projectImage.src = project.image;
+                    projectImage.alt = project.title;
+
+                    let projectTitle = document.createElement("h4");
+                    projectTitle.textContent = project.title;
+
+                    let projectDescription = document.createElement("p");
+                    projectDescription.textContent = project.description;
+
+                    let projectLink = document.createElement("a");
+                    projectLink.href = project.link;
+                    projectLink.textContent = "View Project";
+                    projectLink.target = "_blank"; 
+                    projectLink.rel = "noopener noreferrer"; 
+
+                    // Append elements to the project box
+                    projectBox.appendChild(projectImage);
+                    projectBox.appendChild(projectTitle);
+                    projectBox.appendChild(projectDescription);
+                    projectBox.appendChild(projectLink);
+
+                    // Append to popup container
+                    popupProjectsContainer.appendChild(projectBox);
+                });
+
+                // Show popup
+                popup.style.display = "flex";
+            });
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        // Close popup when clicking outside
+        popup.addEventListener("click", function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+    });
+
+
+
+
+
+//============ Send Email
 emailjs.init("AgrXJOfGBbZY-BR9Y");
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent form submission
