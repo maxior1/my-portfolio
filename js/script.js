@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "description": "The last project of Business Analystic subject by develop the dashboard and pitching this idea for professor",
                     "link": "https://lookerstudio.google.com/s/iToZUT2VzMI"
                 },
+                
                 {
                     "image": "img/portfolio/project/living.png",
                     "title": "Bangkok Population",
@@ -202,7 +203,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     "title": "Sale Report Dashboard",
                     "description": "Created an interactive dashboard for business sale reports", 
                     "link": "https://lookerstudio.google.com/s/hyMnKICBRxM"
-                }
+                },
+                {
+                    "image": "img/portfolio/project/munkaimak.png",
+                    "title": "Mun Kai Mak Sale",
+                    "description": "Sale Dahsboard for a restaurant in Maha Sarkham",
+                    "link": "https://lookerstudio.google.com/s/gpr4PxBJfz4"
+                },
             ],
             "powerbi-project": [ 
                 {
