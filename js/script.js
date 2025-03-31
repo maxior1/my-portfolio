@@ -237,6 +237,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     "link": "#"
                 }
                 
+            ],
+            "da-project": [ 
+                {
+                    "image": "img/portfolio/da/rubber-export.png",
+                    "title": "Last Project & OR-NET Competition Project",
+                    "description": " Analysis and Forecasting of Thailand's Rubber Export Volume",
+                    "link": "https://www.canva.com/design/DAGh6p10Oyg/2417sPoObpgdbq4sbdMVQg/edit?utm_content=DAGh6p10Oyg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                },
+                {
+                    "image": "img/portfolio/da/Oil-Export.png",
+                    "title": "Machine Learning Model",
+                    "description": "Application of Machine Learning Techniques for Forecasting the Export Value of Crude Oil in Thailand",
+                    "link": "https://www.canva.com/design/DAGh8nAFtXY/CBVyG58ZGsVnq3iZIUbEOA/edit?utm_content=DAGh8nAFtXY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                },   
             ]
         };
 
